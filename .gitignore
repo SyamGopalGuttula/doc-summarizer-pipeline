@@ -1,0 +1,10 @@
+# .gitignore
+venv/
+__pycache__/
+*.pyc
+*.zip
+.cache/
+lambda_package/
+lambda_deploy.zip
+.env
+.ps1

@@ -1,0 +1,8 @@
+boto3
+pdfplumber
+python-docx
+transformers
+torch
+pytest
+pytesseract
+pdf2image
