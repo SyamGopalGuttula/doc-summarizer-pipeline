@@ -1,19 +1,19 @@
-# 📄 Document Summarizer Pipeline (Local & Serverless-ready)
+# Document Summarizer Pipeline (Local & Serverless-ready)
 
 This project summarizes text content from PDF, DOCX, and TXT files using a free, local Hugging Face model (`t5-small`). It supports both local runs and packaging for AWS Lambda (via Docker).
 
 ---
 
-## 🧰 Features
+## Features
 
-- ✅ Text extraction from PDF and DOCX
-- ✅ Summarization using a compact Transformers model
-- ✅ Manual run on local files or S3 bucket contents
-- ✅ Docker-based build for Lambda Layer packaging (Torch + Transformers)
+- Text extraction from PDF and DOCX
+- Summarization using a compact Transformers model
+- Manual run on local files or S3 bucket contents
+- Docker-based build for Lambda Layer packaging (Torch + Transformers)
 
 ---
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 doc-summarizer-pipeline/
@@ -33,7 +33,7 @@ doc-summarizer-pipeline/
 
 ---
 
-## 🧪 Testing
+## Testing
 
 Use `pytest` to test extractors, summarizer, and DynamoDB writer.
 
@@ -43,7 +43,7 @@ pytest tests/
 
 ---
 
-## 🐳 Build Lambda Layer with Docker (Optional)
+## Build Lambda Layer with Docker (Optional)
 
 To bundle `transformers`, `torch`, and `sentencepiece` into a Lambda-compatible layer:
 
@@ -57,7 +57,7 @@ docker run --rm -v "%cd%:/lambda" --entrypoint /bin/bash lambda-layer-builder -c
 
 ---
 
-## 🚀 Local Usage
+## Local Usage
 
 You can test the pipeline manually with:
 
