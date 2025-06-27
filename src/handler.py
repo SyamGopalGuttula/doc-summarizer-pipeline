@@ -12,6 +12,6 @@ def process_document(file_path, table_name="DocumentSummaries"):
         raise ValueError("No text found in document.")
 
     summary = summarize_text(text)
-    document_name = file_path.split("/")[-1]  # or use os.path.basename(file_path)
+    document_name = file_path.split("/")[-1]
     write_to_dynamodb(table_name, document_name, summary)
     print(f"[SUCCESS] Summary written to DynamoDB for {document_name}")

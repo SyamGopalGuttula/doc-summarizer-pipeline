@@ -1,6 +1,6 @@
 from transformers import pipeline, AutoTokenizer, AutoModelForSeq2SeqLM
 
-# Use a small model to fit within Lambda ZIP limits
+# Using a small model to fit within Lambda ZIP limits
 tokenizer = AutoTokenizer.from_pretrained("t5-small")
 model = AutoModelForSeq2SeqLM.from_pretrained("t5-small")
 summarizer_pipeline = pipeline("summarization", model=model, tokenizer=tokenizer)

@@ -12,7 +12,7 @@ def extract_text_from_pdf(file_path):
             page_text = page.extract_text()
             if page_text:
                 text += page_text
-    if text.strip():  # If regular text was found, return
+    if text.strip():  # If regular text was found, return it or else it will fall back to OCR
         return text.strip()
     else:
         # Fallback to OCR

@@ -1,10 +1,28 @@
-# .gitignore
-venv/
-__pycache__/
-*.pyc
 *.zip
 .cache/
-lambda_package/
-lambda_deploy.zip
 .env
 .ps1
+
+# Virtual environment
+venv/
+
+# Compiled Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local scripts
+run_local_pipeline.py
+
+# System & editor files
+.DS_Store
+*.swp
+
+# Build artifacts
+lambda-layer.zip
+build/
+dist/
+
+# Git itself
+.git/
